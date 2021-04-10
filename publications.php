@@ -1,5 +1,3 @@
 <?php
-class publication{
-    
-}
+require_once 'data.php';
 ?>
