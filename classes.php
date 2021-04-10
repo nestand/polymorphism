@@ -18,6 +18,7 @@ class NewsPublication extends Publication
 {
     public function printItem()
     {
+    echo "This is News article";
     }
 }
 
@@ -25,6 +26,7 @@ class ArticlePublication extends Publication
 {
     public function printItem()
     {
+        echo "This is just an article";
     }
 }
 
@@ -32,6 +34,7 @@ class ArticlePublication extends Publication
     {
         public function printItem()
         {
+            echo "This is some photo";
         }
     }
 ?>

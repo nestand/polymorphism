@@ -13,7 +13,6 @@ $photo1 = new photoReporting;
 $photo2 = new photoReporting;
 
 $publications = array ($news1,$news2, $article1, $article2, $photo1, $photo2);
-echo '<pre>';
-print_r($publications);
 
-?>
+
+?>  
