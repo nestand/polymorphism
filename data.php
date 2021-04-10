@@ -1,5 +1,1 @@
-<?php
-class articlePublication {
-    
-}
-?>
+// For collecting all the articles in one array and send them to another file
