@@ -5,14 +5,24 @@ require_once 'classes.php';
 //this array will print the result
 $publications = array();
 
-$news1 = new NewsPublication;
-$news2 = new NewsPublication;
-$article1 = new ArticlePublication;
-$article2 = new ArticlePublication;
-$photo1 = new photoReporting;
-$photo2 = new photoReporting;
+//TEST OK! Enter the data from DB 
+ 
+//DB connection
+$connect = mysqli_connect("localhost", "root", "", "polymorphism");
+if (mysqli_connect_errno ()){
+    echo "Problem connexion to DB" .mysqli_connect_errno;
+}
 
-$publications = array ($news1,$news2, $article1, $article2, $photo1, $photo2);
+//DB Query
+$result = mysqli_query($connect, "SELECT * FROM polymorphismtable");
 
+//Work with the results
+while ($row=mysqli_fetch_array($result)){
+   echo '<br>' .$row['type'];
+    $publications[] = new $row['type'];;
+} 
 
+echo '<pre>';
+print_r("$publications");
 ?>  
+

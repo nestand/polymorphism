@@ -11,30 +11,46 @@ class Publication
 
     public function __constract()
     {
+        $this->$id = $row ['id'];
+        $this->title = $row ['title'];
+        $this->date = $row ['date'];
+        $this->short_content = $row ['short_content'];
+        $this->preview = $row ['preview'];
+        $this->author_name = $row ['author_name'];
+        $this->type = $row ['type'];
     }
+   
 }
 
 class NewsPublication extends Publication
 {
     public function printItem()
     {
-    echo "This is News article";
+        echo '<br> News:' .$this->title;
+        echo '<br> Date:' .$this->date;
+        echo '<br>';
     }
 }
 
 class ArticlePublication extends Publication
 {
+    
     public function printItem()
     {
-        echo "This is just an article";
+        echo '<br> Article:' .$this->title;
+        echo '<br> Author:' .$this->author_name;
+        echo '<br>';
     }
 }
 
-    class photoReporting extends Publication
+    class PhotoReporting extends Publication
     {
-        public function printItem()
+       public function printItem()
         {
-            echo "This is some photo";
+            echo '<br> Article:' .$this->title;
+            echo '<br><img src="http://localhost/polymorphism/img .$this->preview">';
+            echo '<br> Date:' .$this->date;
+            echo '<br>';
         }
     }
 ?>
