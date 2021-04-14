@@ -1,4 +1,4 @@
-// For collecting all the articles in one array and send them to another file
+<!-- For collecting all the articles in one array and send them to another file. PS Merci Lucas pour ton feed;)--> 
 <?php
 require_once 'classes.php';
 
